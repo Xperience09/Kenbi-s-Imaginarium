@@ -24,6 +24,25 @@
   margin-bottom: 20px;
 }
 
+body{
+  background-color: #fcd7cf;
+}
+
+.nav{
+  background-color: #AA336A !important;
+}
+
+.nav-link{
+  color:#ffffff !important;
+  margin-right: 20px;
+}
+
+.dropdown-normal{
+  background-color: #AA336A !important;
+  color:#000000 !important;
+  border:none;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
