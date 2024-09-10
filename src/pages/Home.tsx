@@ -1,9 +1,7 @@
-import Heading from "../components/Heading";
-
 function Home() {
   return (
-    <div>
-      <Heading>Kenbi's Imaginarium</Heading>
+    <div className="page">
+      <h1>Home</h1>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 const Poem = () => {
-  return <div>Poem</div>;
+  return <div className="page">Poem</div>;
 };
 
 export default Poem;
