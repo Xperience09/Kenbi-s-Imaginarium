@@ -8,6 +8,7 @@ import BlogA from "./pages/blogs/BlogA";
 import BlogB from "./pages/blogs/BlogB";
 import BlogC from "./pages/blogs/BlogC";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const items = [
@@ -19,6 +20,7 @@ function App() {
   return (
     <div>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -44,10 +44,29 @@ body{
 }
 
 .page{
-  margin-left: 10px;
+  padding-left: 50px; /* Remove extra padding */
+  padding-right: 50px; /* Remove extra padding */
 }
 
-
+/* For smaller screen sizes, ensure layout doesn't overflow */
+@media (max-width: 768px) {
+  .home-row {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.homeQuote{
+  /* font-size: x-large;
+  font-weight: bolder; */
+  font-family: 'Helvetica';
+  font-size: 2rem; /* Big and readable */
+  font-weight: 600; /* Bold enough to stand out */
+  line-height: 1.3; /* Spacing between lines for readability */
+  text-align: center; 
+  color: #333; /* Dark color for readability */
+}
 
 .card{
   width: 18rem !important;
@@ -94,7 +113,10 @@ button:focus-visible {
 }
 
 .image{
-  max-width: 70%;
+  /* max-width: 70%;\ */
+  max-width: 100%; /* Adjust this if needed */
+  height: auto;
+  display: block;
 }
 
 .home-content{
@@ -102,6 +124,10 @@ button:focus-visible {
   /* border-radius: 8px;
   border: 1px solid;
   border-color: #FF6EC7; */
+}
+
+.home-row{
+  margin-top: 50px;
 }
 
 .footer {
