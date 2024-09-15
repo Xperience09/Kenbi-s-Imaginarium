@@ -1,9 +1,10 @@
+import girlReading from "../assets/girlReading.png";
 function Home() {
   return (
     <div className="page container home-content">
       <div className="row">
         <div className="col-md-6 d-flex justify-content-center align-items-center">
-          <img className="image" src="/src/assets/girlReading.png" />
+          <img className="image" src={girlReading} />
         </div>
         <div className="col-md-6 d-flex justify-content-center align-items-center">
           <p className="">

@@ -1,3 +1,5 @@
+import linkedinIcon from "../assets/linkedinIcon.png";
+import yourquote from "../assets/yourquote.png";
 const Footer = () => {
   return (
     <div className="footer">
@@ -9,14 +11,14 @@ const Footer = () => {
               className="text-reset me-4"
               target="_blank"
             >
-              <img src="/src/assets/linkedin-icon.png" className="icon-img" />
+              <img src={linkedinIcon} className="icon-img" />
             </a>
             <a
               href="https://www.yourquote.in/kenbi-riba-ckitq/quotes"
               className="text-reset me-4"
               target="_blank"
             >
-              <img src="/src/assets/yourquote.png" className="icon-img" />
+              <img src={yourquote} className="icon-img" />
             </a>
           </div>
         </section>
