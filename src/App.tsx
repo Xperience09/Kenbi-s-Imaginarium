@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import BlogA from "./pages/blogs/BlogA";
 import BlogB from "./pages/blogs/BlogB";
 import BlogC from "./pages/blogs/BlogC";
+import Footer from "./components/Footer";
 
 function App() {
   const items = [
@@ -35,6 +36,7 @@ function App() {
           <Route path="/blogs/BlogC" element={<BlogC />} />
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }

@@ -87,3 +87,33 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.icon-img{
+  max-width: 200px;
+  height: 40px;
+}
+
+.image{
+  max-width: 70%;
+}
+
+.home-content{
+  margin-top: 50px;
+  /* border-radius: 8px;
+  border: 1px solid;
+  border-color: #FF6EC7; */
+}
+
+.footer {
+  margin-top: 50px;
+  background-color: #FF6EC7 !important;
+  color: #000000 !important;
+}
+
+.footer-content{
+  margin-top: 50px !important;
+}
+
+.dev-info{
+  margin-top: 60px !important;
+}
