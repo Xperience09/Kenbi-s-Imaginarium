@@ -1,6 +1,6 @@
 import Cards from "../components/Cards";
 // import { Poems } from "./poems/Poems";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Poem = () => {
   const [poems, setPoems] = useState([]);
