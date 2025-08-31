@@ -6,16 +6,16 @@ interface Props {
 }
 
 interface PoemCardContent {
-  title: string;
+  id: string;
   content: string;
 }
 
 const Cards = ({ cardContent }: Props) => {
   const [modalContent, setModalContent] = useState<string | null>(null);
   const [modalTitle, setModalTitle] = useState<string | null>(null);
-  const handleOpenModal = (content: string, title: string) => {
+  const handleOpenModal = (content: string, id: string) => {
     setModalContent(content);
-    setModalTitle(title);
+    setModalTitle(id);
   };
 
   // onclose don't show any model
@@ -33,10 +33,10 @@ const Cards = ({ cardContent }: Props) => {
               {/* <img src="..." className="card-img-top" alt="..." /> */}
 
               <div className="card-body">
-                <h5 className="card-title">{item.title}</h5>
+                <h5 className="card-title">{item.id}</h5>
                 {/* <p className="card-text">{item.content}</p> */}
                 <button
-                  onClick={() => handleOpenModal(item.content, item.title)}
+                  onClick={() => handleOpenModal(item.content, item.id)}
                   className="btn btn-outline-light card-btn"
                 >
                   Read

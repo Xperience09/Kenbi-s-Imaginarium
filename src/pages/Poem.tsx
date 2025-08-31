@@ -1,25 +1,32 @@
 import Cards from "../components/Cards";
-// import { Poems } from "./poems/Poems";
 import { useEffect, useState } from "react";
+import { fetchPoems } from "../components/firebase_fetch";
 
 const Poem = () => {
-  const [poems, setPoems] = useState([]);
+  const [poems, setPoems] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(
-      "https://kenbiriba-service-core-production.up.railway.app/Poem/getAll",
-      {
-        method: "GET", // Ensure this matches the allowed methods
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
+    const getPoems = async () => {
+      try {
+        // Fetch only from Firebase
+        const firebasePoems = await fetchPoems();
+        setPoems(firebasePoems);
+      } catch (err) {
+        setError("Failed to fetch poems.");
+        console.error(err);
+      } finally {
+        setLoading(false);
       }
-    )
-      .then((response) => response.json())
-      .then((data) => setPoems(data))
-      .catch((error) => console.error("Error fetching poems:", error));
+    };
+
+    getPoems();
   }, []);
+
+  if (loading) return <p>Loading poems...</p>;
+  if (error) return <p>{error}</p>;
+  if (!poems || poems.length === 0) return <p>No poems found.</p>;
 
   return (
     <div className="page">
